@@ -6,12 +6,12 @@ Static legal-information website for the **Merge Tactics** Android and iOS mobil
 
 **Before publishing the site or using these URLs in Google Play / the App Store:**
 
-1. Replace `[FULL LEGAL NAME]` and `[PUBLIC CONTACT EMAIL]` in `impressum.html` and `privacy.html`. Use the same legal operator name throughout. Do not enter your home address.
+1. **Completed:** The operator name is Diogo Soares and the public email is sevenlampsstudios@gmail.com. Business status supplied: registered sole proprietor (Einzelunternehmen); Seven Lamps Studios is a studio name, not an asserted separate company.
 2. Confirm that the Flexdienst FlexApp service permits using the provided c/o address for this Impressum, and that it meets applicable § 5 DDG requirements for your specific setup. Address supplied: c/o flexdienst – #22691, Kurt-Schumacher-Straße 74, 67663 Kaiserslautern, Germany.
-3. Review whether you must display a business register entry, VAT ID (`USt-IdNr.`), business identification number (`W-IdNr.`) or other mandatory details; add only identifiers that actually apply.
+3. User reports no business-register entry, VAT ID or business identification number. Verify this remains accurate and whether any other § 5 DDG details or immediate contact option must be supplied. Do not publish an ordinary tax number.
 4. Check the actual **production app binary** and every SDK before changing the privacy policy. As of the project docs reviewed on 2026-11-16, rewarded ads and cash shop are placeholders; SDKs are not connected. Setting up a Firebase console project alone does not imply the app collects Firebase data.
-5. Update this policy when activating Google Analytics for Firebase, Crashlytics, Remote Config, AdMob, a consent-management platform, real billing, or other SDKs. Include actual data categories, purposes, legal bases, processors, international transfers, retention, rights and consent controls. Obtain GDPR/ePrivacy consent where applicable **before** optional processing.
-6. Make sure all data-collection statements match Google Play Data safety and Apple's App Privacy responses. Link the Privacy Policy inside the app as well as on store listings.
+5. Planned: Firebase Analytics, Crashlytics, Remote Config and Google AdMob. No actual SDK activation verified. Update the policy when integrating them, including actual data categories, purposes, legal bases, processors, international transfers, retention, rights and consent controls. Obtain GDPR/ePrivacy consent where applicable **before** optional processing.
+6. **Audience: all ages, including children.** Check Google Play Families/target-audience and Apple age-category requirements; configure child-appropriate ads, SDK behavior and consent before launch. Cloud saves are undecided. Make all statements match Google Play Data safety and Apple's App Privacy responses. Link the policy inside the app and on store listings.
 7. Remove the DRAFT banners and noindex directives only after reviewing all information. Have the legal text checked for your circumstances.
 
 ## Publishing with GitHub Pages
