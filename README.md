@@ -2,9 +2,9 @@
 
 Static English/German privacy policy and German Impressum for Merge Tactics.
 
-## Current update: draft pending retention confirmation
+## Current update
 
-Do not deploy this branch yet. The privacy policy's retention paragraph explicitly remains unfinished.
+English and German retention disclosures use the owner's confirmed console settings: event data 2 months, user data 14 months, BigQuery exports 90 days (confirmed 18 November 2026). This documentation update does not change those settings.
 
 ### Confirmed owner details
 
@@ -15,12 +15,11 @@ Do not deploy this branch yet. The privacy policy's retention paragraph explicit
 - Owner reports no Handelsregister entry, VAT ID or Wirtschafts-ID. Omit inapplicable fields; never publish an ordinary tax number. Do not infer VAT exemption from Nebengewerbe status.
 - Intended audience remains 12+. BigQuery export is enabled.
 
-### Remaining facts and release checks
+### Game release checks
 
-1. Confirm Google Analytics event-data retention (2 or 14 months) and BigQuery dataset/table expiration, including existing exported tables. A free tier does not establish retention. BigQuery sandbox's automatic 60-day expiration must not be assumed for this project. Replace both language versions of the pending paragraph before deployment.
-2. The current game has no age-selection or parental-authorization flow. A 12+ audience includes players below the age of independent consent in some jurisdictions. Review and implement appropriate consent and advertising handling before release; the policy does not claim that age verification or parental consent is implemented.
-3. Remote Config fetches and uses Firebase installation identifiers before optional analytics consent. Review the operational legal basis and applicable device-storage/access consent requirements; a policy declaration alone does not establish a statutory necessity exemption.
-4. Verify disclosures against the production binary and console configuration, including actual ads behavior, Apple App Privacy and Google Play Data safety responses. There is no claim of independently audited legal compliance.
+1. The current game has no age-selection or parental-authorization flow. A 12+ audience includes players below the age of independent consent in some jurisdictions. Review and implement appropriate consent and advertising handling before release; the policy does not claim that age verification or parental consent is implemented.
+2. Remote Config fetches and uses Firebase installation identifiers before optional analytics consent. Review the operational legal basis and applicable device-storage/access consent requirements; a policy declaration alone does not establish a statutory necessity exemption.
+3. Verify disclosures against the production binary and console configuration, including actual ads behavior, Apple App Privacy and Google Play Data safety responses. There is no claim of independently audited legal compliance.
 
 ## Source audit
 
@@ -38,7 +37,7 @@ GitHub Pages: `main` / repository root. Keep stable links:
 - https://vingator.github.io/merge-tactics-legal/impressum.html
 - https://vingator.github.io/merge-tactics-legal/privacy.html
 
-The landing page's existing draft banner remains until the publication blockers above are resolved. Remove it and its noindex directive when deploying finalized content.
+The landing page no longer carries the obsolete draft banner or noindex directive. Merging to main publishes the documentation; the separate game release checks above remain applicable.
 
 ## Reference sources
 
