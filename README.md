@@ -1,33 +1,52 @@
 # Merge Tactics — legal pages
 
-Static legal-information website for the **Merge Tactics** Android and iOS mobile game.
+Static English/German privacy policy and German Impressum for Merge Tactics.
 
-## Status: DRAFT — not ready for release
+## Current update
 
-**Before publishing the site or using these URLs in Google Play / the App Store:**
+English and German retention disclosures use the owner's confirmed console settings: event data 2 months, user data 14 months, BigQuery exports 60 days (confirmed 18 November 2026). This documentation update does not change those settings.
 
-1. **Completed:** The operator name is Diogo Soares and the public email is sevenlampsstudios@gmail.com. Business status supplied: registered sole proprietor (Einzelunternehmen); Seven Lamps Studios is a studio name, not an asserted separate company.
-2. Flexdienst FlexApp was purchased and approved specifically to provide a ladungsfähige Impressums- und Zustelladresse for the app. The provided c/o address is used in the Impressum: c/o flexdienst – #22691, Kurt-Schumacher-Straße 74, 67663 Kaiserslautern, Germany. Do not reopen this as a generic unresolved address-selection issue; separately review any other statutory disclosure obligations.
-3. User reports no business-register entry, VAT ID or business identification number. Verify this remains accurate and whether any other § 5 DDG details or immediate contact option must be supplied. Do not publish an ordinary tax number.
-4. Check the actual **production app binary** and every SDK before changing the privacy policy. As of the project docs reviewed on 2026-11-16, rewarded ads and cash shop are placeholders; SDKs are not connected. Setting up a Firebase console project alone does not imply the app collects Firebase data.
-5. Planned: Firebase Analytics, Crashlytics, Remote Config and Google AdMob. No actual SDK activation verified. Update the policy when integrating them, including actual data categories, purposes, legal bases, processors, international transfers, retention, rights and consent controls. Obtain GDPR/ePrivacy consent where applicable **before** optional processing.
-6. **Provisional audience: 12+**, not a final store content rating. Google Play audience selections are 9–12, 13–15, 16–17, 18+, etc., rather than one universal 12+ toggle. A 12+ audience still includes children; review applicable Families/child-privacy rules and configure ads, SDK behavior and consent appropriately. Cloud saves remain undecided. Match Google Play Data safety and Apple's App Privacy responses, and link the policy inside the app and on store listings.
-7. Remove the DRAFT banners and noindex directives only after reviewing all information. Have the legal text checked for your circumstances.
+### Confirmed owner details
 
-## Publishing with GitHub Pages
+- Diogo Soares da Cruz Silva, registered sole proprietor, trading as Seven Lamps Studios.
+- Public email: sevenlampsstudios@gmail.com.
+- Public phone: +49 176 59634413; publication explicitly approved by the owner.
+- Approved service address: c/o flexdienst – #22691, Kurt-Schumacher-Straße 74, 67663 Kaiserslautern, Deutschland. Flexdienst FlexApp was purchased and approved as the service address; do not reopen address selection.
+- Owner reports no Handelsregister entry, VAT ID or Wirtschafts-ID. Omit inapplicable fields; never publish an ordinary tax number. Do not infer VAT exemption from Nebengewerbe status.
+- Intended audience remains 12+. BigQuery export is enabled.
 
-Repository → **Settings → Pages** → Deploy from a branch → `main` / `/(root)`.
+### Game release checks
 
-Expected URLs once Pages is enabled:
+1. The current game has no age-selection or parental-authorization flow. A 12+ audience includes players below the age of independent consent in some jurisdictions. Review and implement appropriate consent and advertising handling before release; the policy does not claim that age verification or parental consent is implemented.
+2. Remote Config fetches and uses Firebase installation identifiers before optional analytics consent. Review the operational legal basis and applicable device-storage/access consent requirements; a policy declaration alone does not establish a statutory necessity exemption.
+3. Verify disclosures against the production binary and console configuration, including actual ads behavior, Apple App Privacy and Google Play Data safety responses. There is no claim of independently audited legal compliance.
+
+## Source audit
+
+Game source reviewed at `Vingator/merge-tactics` main commit `886c3df145c0ab3a4e811c5c5c768fccf393e78b`.
+
+The code includes StoreKit / Play Billing, separately consented Firebase Analytics and Crashlytics uploads, detailed gameplay replay analytics, Remote Config startup fetches, and Google AdMob / UMP. The old claim that these are only placeholders has been removed. There is no game account or developer cloud save. Device backup is separate.
+
+Habby's and Dream Games' public privacy policies were compared for structure: data/purpose, providers, retention and choices. Their unrelated social, careers and account disclosures were not copied. The Impressum omits speculative register/tax fields and generic legal boilerplate.
+
+## Publishing
+
+GitHub Pages: `main` / repository root. Keep stable links:
+
 - https://vingator.github.io/merge-tactics-legal/
 - https://vingator.github.io/merge-tactics-legal/impressum.html
 - https://vingator.github.io/merge-tactics-legal/privacy.html
 
-## Source links
+The landing page no longer carries the obsolete draft banner or noindex directive. Merging to main publishes the documentation; the separate game release checks above remain applicable.
+
+## Reference sources
 
 - [§ 5 DDG](https://www.gesetze-im-internet.de/ddg/__5.html)
-- [GDPR (EUR-Lex)](https://eur-lex.europa.eu/eli/reg/2016/679/oj)
-- [Google Play privacy-policy requirements](https://support.google.com/googleplay/android-developer/answer/9859455)
-- [Firebase privacy and security](https://firebase.google.com/support/privacy)
-
-These pages are drafts for review, **not legal advice**.
+- [GDPR](https://eur-lex.europa.eu/eli/reg/2016/679/oj)
+- [§ 25 TDDDG](https://www.gesetze-im-internet.de/ttdsg/__25.html)
+- [Firebase privacy](https://firebase.google.com/support/privacy)
+- [Analytics retention settings](https://support.google.com/analytics/answer/7667196)
+- [BigQuery sandbox](https://cloud.google.com/bigquery/docs/sandbox)
+- [AdMob data disclosure](https://developers.google.com/admob/ios/privacy/data-disclosure)
+- [GitHub privacy](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement)
+- Structure comparison: [Habby](https://www.habby.com/privacyPolicy.html), [Dream Games](https://www.dreamgames.com/en/privacy)
