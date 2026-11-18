@@ -4,7 +4,7 @@ Static English/German privacy policy and German Impressum for Merge Tactics.
 
 ## Current update
 
-English and German retention disclosures use the owner's confirmed console settings: event data 2 months, user data 14 months, BigQuery exports 90 days (confirmed 18 November 2026). This documentation update does not change those settings.
+English and German retention disclosures use the owner's confirmed console settings: event data 2 months, user data 14 months, BigQuery exports 60 days (confirmed 18 November 2026). This documentation update does not change those settings.
 
 ### Confirmed owner details
 
