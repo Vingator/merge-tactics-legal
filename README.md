@@ -4,7 +4,7 @@ Static English/German privacy policy and German Impressum for Merge Tactics.
 
 ## Current update
 
-As of 21 November 2026, both languages describe the optional iOS 0.1.4 Apple sign-in and Firebase cloud save, account deletion, Firebase Authentication retention and local reminders. Earlier versions continue to work with local saves.
+As of 21 November 2026, both languages describe the optional iOS 0.1.4 Apple sign-in and Firebase cloud save, account deletion, Firebase Authentication retention and local reminders. They distinguish the local age-group selection, separate online-configuration choice and non-personalized rewarded ads in 0.1.4 from the behavior in earlier versions.
 
 English and German analytics retention disclosures use the owner's confirmed console settings: event data 2 months, user data 14 months, BigQuery exports 60 days (confirmed 18 November 2026). This documentation update does not change those settings.
 
@@ -19,13 +19,13 @@ English and German analytics retention disclosures use the owner's confirmed con
 
 ### Game release checks
 
-1. The current game has no age-selection or parental-authorization flow. A 12+ audience includes players below the age of independent consent in some jurisdictions. Review and implement appropriate consent and advertising handling before release; the policy does not claim that age verification or parental consent is implemented.
-2. Remote Config fetches and uses Firebase installation identifiers before optional analytics consent. Review the operational legal basis and applicable device-storage/access consent requirements; a policy declaration alone does not establish a statutory necessity exemption.
+1. Test the mobile 0.1.4 privacy screen on a fresh install and on an upgrade from a previously opted-in device. Under 16 and undisclosed age selections should leave optional analytics, crash uploads, Remote Config and rewarded ads off. For 16 and older, test independent opt-ins and withdrawal. Check SDK initialization, ad requests and the UMP flow on signed builds.
+2. In iOS 0.1.4, verify the Apple sign-in, restore, disconnect and delete-account paths using a test account and the production project configuration. Account deletion should remove the Firestore profile, revoke Apple authorization and delete the Firebase Auth user while retaining the phone’s local progress.
 3. Verify disclosures against the production binary and console configuration, including actual ads behavior, Apple App Privacy and Google Play Data safety responses. There is no claim of independently audited legal compliance.
 
 ## Source audit
 
-Game source reviewed at `Vingator/merge-tactics` main commit [`23947042`](https://github.com/Vingator/merge-tactics/commit/23947042b5202cd54b0fe469d1e0a8a76c5a2aeb).
+The iOS cloud-save and notification disclosures follow [game revision `23947042`](https://github.com/Vingator/merge-tactics/commit/23947042b5202cd54b0fe469d1e0a8a76c5a2aeb). The 0.1.4 mobile privacy choices and ad reporting follow [game revision `54bc2aee`](https://github.com/Vingator/merge-tactics/commit/54bc2aeea1a803156e0c00bad559a678c6e0c6c6).
 
 The code includes StoreKit / Play Billing, separately consented Firebase Analytics and Crashlytics uploads, detailed gameplay replay analytics, Remote Config startup fetches, and Google AdMob / UMP. The old claim that these are only placeholders has been removed. iOS 0.1.4 adds optional Sign in with Apple, Firebase Authentication and a Firestore save linked to the account. Device backup and local notification scheduling are separate.
 
