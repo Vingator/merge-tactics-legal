@@ -25,7 +25,7 @@ English and German analytics retention disclosures use the owner's confirmed con
 
 ## Source audit
 
-The iOS cloud-save and notification disclosures follow [game revision `23947042`](https://github.com/Vingator/merge-tactics/commit/23947042b5202cd54b0fe469d1e0a8a76c5a2aeb).
+The mobile privacy choices and ad reporting follow [game revision `0867d665`](https://github.com/Vingator/merge-tactics/commit/0867d6652a54b089b7960b5e3282ffb9eae73ecb). The iOS cloud-save and notification disclosures follow [game revision `23947042`](https://github.com/Vingator/merge-tactics/commit/23947042b5202cd54b0fe469d1e0a8a76c5a2aeb).
 
 The code includes StoreKit / Play Billing, separately consented Firebase Analytics and Crashlytics uploads, detailed gameplay replay analytics, Remote Config startup fetches, and Google AdMob / UMP. The old claim that these are only placeholders has been removed. iOS 0.1.4 adds optional Sign in with Apple, Firebase Authentication and a Firestore save linked to the account. Device backup and local notification scheduling are separate.
 
