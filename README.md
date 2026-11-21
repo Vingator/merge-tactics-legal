@@ -4,7 +4,9 @@ Static English/German privacy policy and German Impressum for Merge Tactics.
 
 ## Current update
 
-English and German retention disclosures use the owner's confirmed console settings: event data 2 months, user data 14 months, BigQuery exports 60 days (confirmed 18 November 2026). This documentation update does not change those settings.
+As of 21 November 2026, both languages describe the optional iOS 0.1.4 Apple sign-in and Firebase cloud save, account deletion, Firebase Authentication retention and local reminders. Earlier versions continue to work with local saves.
+
+English and German analytics retention disclosures use the owner's confirmed console settings: event data 2 months, user data 14 months, BigQuery exports 60 days (confirmed 18 November 2026). This documentation update does not change those settings.
 
 ### Confirmed owner details
 
@@ -23,9 +25,9 @@ English and German retention disclosures use the owner's confirmed console setti
 
 ## Source audit
 
-Game source reviewed at `Vingator/merge-tactics` main commit `886c3df145c0ab3a4e811c5c5c768fccf393e78b`.
+Game source reviewed at `Vingator/merge-tactics` main commit [`23947042`](https://github.com/Vingator/merge-tactics/commit/23947042b5202cd54b0fe469d1e0a8a76c5a2aeb).
 
-The code includes StoreKit / Play Billing, separately consented Firebase Analytics and Crashlytics uploads, detailed gameplay replay analytics, Remote Config startup fetches, and Google AdMob / UMP. The old claim that these are only placeholders has been removed. There is no game account or developer cloud save. Device backup is separate.
+The code includes StoreKit / Play Billing, separately consented Firebase Analytics and Crashlytics uploads, detailed gameplay replay analytics, Remote Config startup fetches, and Google AdMob / UMP. The old claim that these are only placeholders has been removed. iOS 0.1.4 adds optional Sign in with Apple, Firebase Authentication and a Firestore save linked to the account. Device backup and local notification scheduling are separate.
 
 Habby's and Dream Games' public privacy policies were compared for structure: data/purpose, providers, retention and choices. Their unrelated social, careers and account disclosures were not copied. The Impressum omits speculative register/tax fields and generic legal boilerplate.
 
